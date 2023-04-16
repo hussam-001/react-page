@@ -48,7 +48,7 @@ class ImageComponent extends React.Component<
     } = this.props;
     return (
       <div>
-        <div>
+        <div style={{ display: 'flex' }}>
           {this.props.imageUpload && (
             <React.Fragment>
               <ImageUpload
@@ -57,7 +57,10 @@ class ImageComponent extends React.Component<
                 imageLoaded={this.handleImageLoaded}
                 imageUploaded={this.handleImageUploaded}
               />
-              <Typography variant="body1" style={{ marginTop: '16px' }}>
+              <Typography
+                variant="body1"
+                style={{ margin: '20px 16px 0 16px' }}
+              >
                 {this.props.translations?.or}
               </Typography>
             </React.Fragment>
@@ -76,7 +79,6 @@ class ImageComponent extends React.Component<
           />
 
           <FormControlLabel
-            sx={{ mt: '16px' }}
             control={
               <Switch
                 onChange={this.handleChangeIsParallax}
